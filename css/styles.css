@@ -8,6 +8,7 @@
   --logo-studio-color: #000000;
   --border-menu-navigation: #ececec;
   --border-project-card: #eeeeee;
+  --icons-color: #afb1b8;
 }
 
 body {
@@ -18,32 +19,27 @@ body {
   font-size: 14px;
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  display: block;
-}
-
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-ul {
-  list-style-type: none;
+.list {
+  list-style: none;
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
   padding-inline-start: 0px;
+  padding-left: 0;
 }
 
+.link {
+  text-decoration: none;
+}
+
+h1,
 li,
 p,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -51,6 +47,26 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+button {
+  border: none;
+  cursor: pointer;r
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 header {
@@ -77,6 +93,10 @@ header {
   border-bottom: 1px solid var(--border-menu-navigation);
 }
 
+.nav-list {
+  margin-left: 93px;
+}
+
 .link-nav-list {
   display: inline-flex;
   align-items: center;
@@ -86,17 +106,59 @@ header {
   justify-items: flex-end;
 }
 
+
 .site-nav {
   display: inline-flex;
-  column-gap: 30px;
-  padding: 0px;
+  align-items: center;
+  gap: 30px;
   margin-left: auto;
 }
 
-.site-nav .site-nav-item {
+.site-nav-button {
   display: inline-flex;
   align-items: center;
+  background-color: #fff;
+  color: var(--text-gray-color);
+  cursor: pointer;
+  padding: 0;
 }
+
+.site-nav-button:hover,
+.site-nav-button:focus {
+  color: var(--blue-color);
+}
+
+.link-phone,
+.link-email {
+  color: var(--text-gray-color);
+}
+
+.mail-info,
+.phone-info {
+  letter-spacing: 0.02em;
+  margin-left: 10px;
+}
+
+.envelope,
+.mobile {
+  fill: currentColor;
+}
+
+.envelope {
+  align-self: center;
+}
+
+.link-phone::before {
+  display: inline-flex;
+  content: '';
+  background: url('./images/icons.svg') ;
+  background-size: 0;
+  height: 16px;
+  width: 10px;
+  fill: currentColor;
+}
+
+
 
 .logo-studio {
   font-family: 'Raleway', sans-serif;
@@ -104,7 +166,6 @@ header {
   font-size: 26px;
   line-height: 1.2;
   color: var(--logo-studio-color);
-  text-decoration: none;
 }
 
 .logo-web {
@@ -116,12 +177,6 @@ header {
 .site-nav {
   line-height: 1.2;
   letter-spacing: 0.02em;
-  text-decoration: none;
-}
-
-.link-contact {
-  color: var(--text-gray-color);
-  text-decoration: none;
 }
 
 .link-nav {
@@ -145,28 +200,17 @@ header {
   color: var(--blue-color);
 }
 
-.link-mail, 
-.link-phone {
-  line-height: 0px;
-  font-size: 0px;
-  margin-right: 10px;
-}
-
-.envelope,
-.phone {
-  fill: currentColor;
-}
-
 .motto-order-section {
-  background-image: 
-    linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
-    url('/images/main-bkg.jpg');
-  background-size: cover;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
   padding-right: auto;
   padding-left: auto;
+  background-image: 
+  linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+  url('/images/main-bkg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .main-h1 {
@@ -176,7 +220,8 @@ header {
   color: var(--main-color);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin-top: 0px;
+  margin: 0 auto;
+  width: 696px;
   margin-bottom: 30px;
 }
 
@@ -216,10 +261,6 @@ header {
   background-color: var(--main-color);
 }
 
-.features-section {
-  padding-top: 92px;
-}
-
 .feature-name {
   font-size: 14px;
   font-weight: 700;
@@ -230,10 +271,6 @@ header {
 
 .features {
   display: flex;
-  align-content: center;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: row;
 }
 
 .features-item:not(:last-child) {
@@ -249,7 +286,6 @@ header {
 }
 
 .feature-icon {
-  fill: currentColor;
   background-color: var(--button-background);
   padding: 25px 100px;
   margin-bottom: 30px;
@@ -264,30 +300,22 @@ header {
 }
 
 .what-we-do-section {
-  display: flex;
-  flex-direction: column;
   padding-top: 0;
 }
 
 .img-what-we-do {
   display: inline-flex;
-  justify-content: space-between;
-  column-gap: 10px;
+  column-gap: 30px;
 }
 
 .team-cards-list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 .team-card {
-  display: block-flex;
   text-align: center;
-  column-gap: 10px;
   background-color: var(--main-color);
-  justify-content: center;
-  align-items: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -310,25 +338,71 @@ header {
 
 .team-name {
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .team-info {
   color: var(--text-gray-color);
-  margin-top: 5px;
 }
 
-.social-media-team {
-  display: inline-flex;
-  justify-content: center;
-  gap: 10px;
+.icons-media-section {
+  padding: 0 32px 30px 32px;
   margin-top: 16px;
-  padding-bottom: 30px;
+  display: inline-flex;
+  gap: 10px;
 }
 
-.icons-media {
-  fill: var(--blue-color);
+.media-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--icons-color);
+}
 
+.media-button:hover,
+.media-button:focus {
+  color: var(--main-color);
+  background: var(--blue-color);
+  transition: 300ms;
+}
+
+.icon-item {
+  fill: currentColor;
+  position: relative;i
+}
+
+.partner {
+  display: flex;
+  gap: 30px;
+}
+
+.partner-button {
+  background: var(--main-color);
+  border: 1px solid var(--icons-color);
+  color: var(--icons-color);
+  padding: 15px 31px;
+}
+
+.partner-button:hover,
+.partner-button:focus {
+  color: var(--blue-color);
+  border-color: var(--blue-color);
+}
+
+.partner-icon {
+  fill: currentColor;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 106px;
+  height: 60px;
 }
 
 .filter-list {
@@ -359,27 +433,28 @@ header {
   border-radius: 4px;
   background-color: var(--blue-color);
   color: var(--main-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .projects {
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 30px;
   padding-top: 0;
 }
 
-.project {
-  display: flex;
-  flex-direction: column;
+.project:hover,
+.project:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 
 .project-info {
   border-left: 1px solid var(--border-project-card);
   border-right: 1px solid var(--border-project-card);
   border-bottom: 1px solid var(--border-project-card);
-  padding: 20px 23px;
+  padding: 20px 24px;
 }
 
 .project-name {
@@ -387,14 +462,13 @@ header {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .project-type {
   font-size: 16px;
   color: var(--text-gray-color);
   line-height: 1.875;
-  margin-top: 2px;
 }
 
 footer {
@@ -408,6 +482,32 @@ footer {
   margin-bottom: 10px;
 }
 
+.footer-section {
+  display: flex;
+}
+
+.footer-media-links {
+  margin-left: 70px;
+}
+
+.footer-join {
+  text-transform: uppercase;
+  color: var(--main-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+.footer-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--main-color);
+}
+
+.footer-icons {
+  display: flex;
+  gap: 10px;
+}
+
 address {
   color: var(--main-color);
   font-style: normal;
@@ -419,17 +519,24 @@ address {
   margin-bottom: 9px;
 }
 
+.address-link {
+  color: var(--main-color);
+}
+
 .footer-contact,
 .footer-contact:visited {
   color: var(--main-color);
   opacity: 60%;
-  text-decoration: none;
 }
 
 .logo-footer,
 .footer-contact:hover,
 .footer-contact:focus,
-.logo-footer:visited {
+.logo-footer:visited,
+.address-link:hover,
+.address-link:focus,
+.address-link:visited:hover,
+.address-link:visited:focus {
   color: var(--blue-color);
   opacity: 100%;
 }
