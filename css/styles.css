@@ -9,6 +9,7 @@
   --border-menu-navigation: #ececec;
   --border-project-card: #eeeeee;
   --icons-color: #afb1b8;
+  --main-backggound-shadow: rgba(47, 48, 58, 0.4);
 }
 
 body {
@@ -30,6 +31,12 @@ body {
 
 .link {
   text-decoration: none;
+  color: currentColor;
+}
+
+.icon-link {
+  text-decoration: none;
+  color: currentColor;
 }
 
 h1,
@@ -101,9 +108,6 @@ header {
   display: inline-flex;
   align-items: center;
   gap: 50px;
-  padding: 0px;
-  margin-left: 93px;
-  justify-items: flex-end;
 }
 
 .site-nav {
@@ -114,28 +118,19 @@ header {
 }
 
 .site-nav-button {
-  display: inline-flex;
-  align-items: center;
   background-color: #fff;
   color: var(--text-gray-color);
   cursor: pointer;
-  padding: 0;
-}
-
-.site-nav-button:hover,
-.site-nav-button:focus {
-  color: var(--blue-color);
 }
 
 .link-phone,
 .link-email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--text-gray-color);
-}
-
-.mail-info,
-.phone-info {
   letter-spacing: 0.02em;
-  margin-left: 10px;
+  font-weight: 500;
 }
 
 .envelope,
@@ -143,21 +138,10 @@ header {
   fill: currentColor;
 }
 
-.envelope {
-  align-self: center;
+.link-email:hover,
+.link-email:focus {
+  color: var(--blue-color);
 }
-
-.link-phone::before {
-  display: inline-flex;
-  content: '';
-  background: url('./images/icons.svg') ;
-  background-size: 0;
-  height: 16px;
-  width: 10px;
-  fill: currentColor;
-}
-
-
 
 .logo-studio {
   font-family: 'Raleway', sans-serif;
@@ -201,15 +185,16 @@ header {
 
 .motto-order-section {
   text-align: center;
+  max-width: 1600px;
+  height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
-  padding-right: auto;
-  padding-left: auto;
   background-image: 
-    linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+    linear-gradient(to bottom, var(--main-backggound-shadow), var(--main-backggound-shadow)), 
     url('../images/main-bkg.jpg');
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 .main-h1 {
@@ -288,6 +273,7 @@ header {
   background-color: var(--button-background);
   padding: 25px 100px;
   margin-bottom: 30px;
+  border-radius: 4px;
 }
 
 .main-section-name {
@@ -322,6 +308,7 @@ header {
 
 .our-team {
   background-color: var(--button-background);
+  background-size: cover;
 }
 
 .team-info,
@@ -345,20 +332,29 @@ header {
 }
 
 .icons-media-section {
-  padding: 0 32px 30px 32px;
   margin-top: 16px;
-  display: inline-flex;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.icons-media-list {
+  display: flex;
   gap: 10px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .media-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: var(--main-color);
   border: none;
   cursor: pointer;
-  padding: 0;
   color: var(--icons-color);
 }
 
@@ -366,24 +362,33 @@ header {
 .media-button:focus {
   color: var(--main-color);
   background: var(--blue-color);
-  transition: 300ms;
+  transition: 300ms; 
+}
+
+.link-media {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon-item {
   fill: currentColor;
-  position: relative;i
+  position: relative;
 }
 
 .partner {
   display: flex;
   gap: 30px;
+
 }
 
 .partner-button {
   background: var(--main-color);
   border: 1px solid var(--icons-color);
   color: var(--icons-color);
-  padding: 15px 31px;
+  cursor: pointer;
 }
 
 .partner-button:hover,
@@ -392,16 +397,16 @@ header {
   border-color: var(--blue-color);
 }
 
-.partner-icon {
-  fill: currentColor;
-}
-
-.button-container {
+.partner-link {
+  width: 168px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 106px;
-  height: 60px;
+}
+
+.partner-icon {
+  fill: currentColor;
 }
 
 .filter-list {
@@ -446,7 +451,6 @@ header {
 .project:hover,
 .project:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  cursor: pointer;
 }
 
 .project-info {
@@ -471,18 +475,20 @@ header {
 }
 
 footer {
-  background-color: var(--footer-background);
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: var(--footer-background);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+footer .container {
+  display: flex;
+  align-items: baseline;
 }
 
 .logo-footer {
-  width: fit-content;
   margin-bottom: 10px;
-}
-
-.footer-section {
-  display: flex;
 }
 
 .footer-media-links {
