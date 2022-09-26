@@ -106,7 +106,6 @@ header {
   justify-items: flex-end;
 }
 
-
 .site-nav {
   display: inline-flex;
   align-items: center;
@@ -208,7 +207,7 @@ header {
   padding-left: auto;
   background-image: 
     linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
-    url('./images/main-bkg.jpg');
+    url('./goit-markup-hw-04/images/main-bkg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
