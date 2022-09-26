@@ -1,2 +1,2 @@
-# goit-markup-hw-02
-Module 2 HW (CSS fundamentals)
+# goit-markup-hw-04
+Module 4 HW (Decorative elements, SVG graphics)
