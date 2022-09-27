@@ -371,15 +371,14 @@ header {
 }
 
 .partner-link {
-  padding: 15px 31px;
-  background: var(--main-color);
   border: 1px solid var(--icons-color);
   color: var(--icons-color);
-  width: 100%;
-  height: 100%;
+  width: 170px;
+  height: 93px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 4px;
 }
 
 .partner-link:hover,
