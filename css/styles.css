@@ -62,7 +62,7 @@ address {
 
 button {
   border: none;
-  cursor: pointer;r
+  cursor: pointer;
 }
 
 .container {
@@ -363,7 +363,6 @@ header {
 
 .icon-item {
   fill: currentColor;
-  position: relative;
 }
 
 .partner {
