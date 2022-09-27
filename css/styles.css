@@ -192,7 +192,7 @@ header {
   background-image: 
     linear-gradient(to bottom, var(--main-backggound-shadow), var(--main-backggound-shadow)), 
     url('../images/main-bkg.jpg');
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
 }
@@ -319,7 +319,7 @@ header {
 }
 
 .team-card-info {
-  padding-top: 30px;
+  padding: 30px 32px;
 }
 
 .team-name {
@@ -329,13 +329,7 @@ header {
 
 .team-info {
   color: var(--text-gray-color);
-}
-
-.icons-media-section {
-  margin-top: 16px;
-  padding-bottom: 30px;
-  padding-left: 32px;
-  padding-right: 32px;
+  margin-bottom: 16px;
 }
 
 .icons-media-list {
@@ -346,23 +340,8 @@ header {
 }
 
 .media-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
-  background-color: var(--main-color);
-  border: none;
-  cursor: pointer;
-  color: var(--icons-color);
-}
-
-.media-button:hover,
-.media-button:focus {
-  color: var(--main-color);
-  background: var(--blue-color);
-  transition: 300ms; 
 }
 
 .link-media {
@@ -371,6 +350,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  color: var(--icons-color);
+}
+
+.link-media:hover,
+.link-media:focus {
+  color: var(--main-color);
+  background: var(--blue-color);
 }
 
 .icon-item {
@@ -381,28 +369,24 @@ header {
 .partner {
   display: flex;
   gap: 30px;
-
-}
-
-.partner-button {
-  background: var(--main-color);
-  border: 1px solid var(--icons-color);
-  color: var(--icons-color);
-  cursor: pointer;
-}
-
-.partner-button:hover,
-.partner-button:focus {
-  color: var(--blue-color);
-  border-color: var(--blue-color);
 }
 
 .partner-link {
-  width: 168px;
-  height: 90px;
+  padding: 15px 31px;
+  background: var(--main-color);
+  border: 1px solid var(--icons-color);
+  color: var(--icons-color);
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.partner-link:hover,
+.partner-link:focus {
+  color: var(--blue-color);
+  border-color: var(--blue-color);
 }
 
 .partner-icon {
@@ -448,10 +432,13 @@ header {
   padding-top: 0;
 }
 
-.project:hover,
-.project:focus {
+.project-link {
+  display: block;
+}
+
+.project-link:hover,
+.project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: 200ms;
 }
 
 .project-info {
@@ -504,7 +491,7 @@ footer .container {
   line-height: 1.18;
 }
 
-.footer-button {
+.link-media-footer {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--main-color);
 }
